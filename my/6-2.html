@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第6周第2次作业</title>
+		<style type="text/css">
+			body{
+				background-color: #F0F8FF;
+			}
+			img{
+				width: 500px;
+				height: 500px;
+			}
+			div{
+				width: 500px;
+				height: 500px;
+				margin: 0 auto;
+			}
+		</style>
+		<script type="text/javascript">
+			function my(){
+				alert("我来啦！");
+			}
+			function myfouse(){
+				var a=document.getElementById("demo");
+				alert("你写了什么？");
+			}
+		</script>
+	</head>
+	<body onload="my()">
+		<div >
+			<img src="./img/6-2.jpg"/>
+			<input type="text" onchange="myfouse()" id="demo"/>
+		</div>
+		
+	</body>
+</html>
