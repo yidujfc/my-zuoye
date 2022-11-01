@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第8周第1次课作业1</title>
+		<style type="text/css">
+			body{
+				background: url(./img/8-1-2.jpg);
+				background-size: 1280px 720px;
+			}
+			table{
+				margin:130px 300px;
+				font-size: 18px;
+				font-family: 黑体;
+				font-weight: bold;
+			}
+			tr{
+				line-height: 40px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<form>
+			<table>
+				<tr align="center" style="font-size: 20px;">
+					<td colspan="2"><b>新用户注册</b></td>
+				</tr>
+				<tr>
+					<td>用户名：</td>
+					<td>
+						<input type="text" id="user" placeholder="请输入用户名" onblur="myUser()"/>
+					</td>
+					<td>
+						<font color="red" id="user-tip"></font>
+					</td>
+				</tr>
+				<tr>
+					<td>密码：</td>
+					<td>
+						<input type="password" id="mima" placeholder="请输入至少6位的密码" onblur="myMima()"/>
+					</td>
+					<td>
+						<font color="red" id="mima-tip"></font>
+					</td>
+				</tr>
+				<tr>
+					<td>验证密码：</td>
+					<td>
+						<input type="password" id="remima" placeholder="请再次输入相同密码" onkeyup="myRemima()"/>
+					</td>
+					<td>
+						<font color="red" id="remima-tip"></font>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<script>
+			//当用户没有输入账号并且鼠标离开用户名输入框时，提醒用户输入用户名
+			function myUser(){
+				//获取用户名
+				var use = document.getElementById('user').value;
+				//判断
+				if(use == null || use == ""){
+					var tip1 = document.getElementById('user-tip');
+					tip1.innerHTML="*用户名不能为空！";
+				}else{
+					var tip1 = document.getElementById('user-tip');
+					tip1.innerHTML="<font color='green'>*用户名合法！</font>";
+				}
+			}
+			//判断密码至少6位
+			function myMima(){
+				//获取输入的第一次的密码
+				var mima = document.getElementById('mima').value;
+				//获取密码提示
+				var tip2 = document.getElementById('mima-tip');
+				if(mima.length < 6 || mima  == ""){
+					tip2.innerHTML = "*密码最少6位！"
+				}else{
+					tip2.innerHTML = "<font color='green'>*密码合法！</font>"
+				}
+			}
+			function myRemima(){
+				//获取两次的密码
+				var mima = document.getElementById('mima').value;
+				var remima = document.getElementById('remima').value;
+				//获取提示
+				var tip3 = document.getElementById('remima-tip');
+				//判断
+				if(mima == remima){
+					tip3.innerHTML="<font color='green'>*密码一致</font>";
+				}else{
+					tip3.innerHTML="*密码不一致";
+				}
+			}
+		</script>
+	</body>
+</html>
