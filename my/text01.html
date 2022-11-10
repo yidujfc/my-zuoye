@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第1次实验项目 信息登记表</title>
+	</head>
+	<style type="text/css">
+		body{
+			background-color: aliceblue;
+		}
+		table{
+			border: aquamarine solid 3px;
+			text-align: left;
+			padding: 10px;
+			margin-top: 20px;
+			font-family: 宋体;
+		}
+		td{
+			padding-bottom: 10px;
+		}
+		img{
+			width: 15px;
+			height: 15px;
+		}
+	</style>
+	<body>
+		<table align="center">
+			<tr>
+				<td>姓名：</td>
+				<td>
+					<input type="text" name="username" placeholder="请输入你的姓名......"/>
+				</td>
+			</tr>
+			<tr>
+				<td>年龄：</td>
+				<td>
+					<input type="text" name="age" placeholder="请输入你的年龄......"/>
+				</td>
+			</tr>
+			<tr>
+				<td>性别：</td>
+				<td>
+					<input type="radio" name="sex" value="0"/><img src="./img/text01-man.jpg"/>男士
+					<input type="radio" name="sex" value="1"/><img src="./img/text01-woman.jpg"/>女士
+				</td>
+			</tr>
+			<tr>
+				<td>生日：</td>
+				<td>
+					<select name="year">
+						<option value="">--请选择年份--</option>
+						<option value="1">2000年</option>
+						<option value="2">2001年</option>
+						<option value="3">2002年</option>
+						<option value="4">2003年</option>
+						<option value="5">2004年</option>
+						<option value="6">2005年</option>
+						<option value="7">2006年</option>
+						<option value="8">2007年</option>
+						<option value="9">2008年</option>
+						<option value="10">2009年</option>
+						<option value="11">2010年</option>
+						<option value="12">2011年</option>
+					</select>
+					<select name="month">
+						<option value="">--请选择月份--</option>
+						<option value="1">1月</option>
+						<option value="2">2月</option>
+						<option value="3">3月</option>
+						<option value="4">4月</option>
+						<option value="5">5月</option>
+						<option value="6">6月</option>
+						<option value="7">7月</option>
+						<option value="8">8月</option>
+						<option value="9">9月</option>
+						<option value="10">10月</option>
+						<option value="11">11月</option>
+						<option value="12">12月</option>
+					</select>
+					<select name="day">
+						<option value="">--请选择日--</option>
+						<option value="1">1号</option>
+						<option value="2">2号</option>
+						<option value="3">3号</option>
+						<option value="4">4号</option>
+						<option value="5">5号</option>
+						<option value="6">6号</option>
+						<option value="7">7号</option>
+						<option value="8">8号</option>
+						<option value="9">9号</option>
+						<option value="10">10号</option>
+						<option value="11">11号</option>
+						<option value="12">12号</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>爱好：</td>
+				<td>
+					<input type="checkbox" name="hobby" value="0"/>阅读
+					<input type="checkbox" name="hobby" value="1"/>跑步
+					<input type="checkbox" name="hobby" value="2"/>游泳
+					<input type="checkbox" name="hobby" value="3"/>阅读
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">个人介绍:</td>
+				
+			</tr>
+			<tr>
+				<td colspan="2">
+					<textarea rows="5px" cols="53px" placeholder="请输入你的个人介绍......" style="overflow: hidden;"></textarea>
+				</td>
+				
+			</tr>
+			<tr>
+				<td colspan="2">
+				<input type="checkbox" name="ok"/>我同意信息录入
+				</td>
+				
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" name="sub" value="立即注册"/>
+					<input type="reset" name="res" value="重新输入"/>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

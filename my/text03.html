@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第3次实验项目-跑动的汽车</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.one{
+				width: 800px;
+				height: 500px;
+				border: 3px solid black;
+				margin: 50px auto;
+				position: relative;
+				border-radius: 15px;
+				background-color: skyblue;
+			}
+			.two{
+				width:700px;
+				height: 400px;
+				border: 3px dashed black;
+				margin: 50px auto;
+				border-radius: 15px;
+			}
+			.three{
+				width: 600px;
+				height: 300px;
+				border: 3px solid black;
+				margin: 50px auto;
+				border-radius: 5px;
+				background-color: white;
+			}
+			img{
+				width: 90px;
+				height: 90px;
+				position: absolute;
+				animation: my 7s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+			@keyframes my{
+				0%{left: 240px; top: 30px;}
+				25%{left: 950px; top: 30px;}
+				50%{left: 950px; top: 434px;}
+				75%{left: 240px; top: 434px;}
+				100%{left: 240px; top: 30px;}
+			}
+			img:hover{
+				animation-play-state: paused;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="one">
+			<div class="two">
+				<div class="three"></div>
+			</div>
+		</div>
+			<img src="./img/text03.png"/>
+	</body>
+</html>
